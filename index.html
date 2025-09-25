@@ -46,7 +46,6 @@
     <nav class="container mx-auto px-5 md:px-8 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center gap-3">
         <img src="logo.png" alt="로고" class="h-8 w-8 object-contain" onerror="this.style.display='none'">
-        <!-- 요구 1: 좌측 상단 라벨 교체(작은 글씨+그라데이션) -->
         <span class="text-gradient font-semibold text-sm md:text-base">완도SW교육체험센터</span>
       </a>
       <div class="hidden md:flex gap-6 font-medium">
@@ -81,9 +80,7 @@
             <span class="chip">수업 혁신</span>
             <span class="chip">업무 자동화</span>
           </div>
-          <!-- 요구 2: 어색한 줄바꿈 해결 (문구 약간 축약 + clamp로 가변 글자크기) -->
-          <h1 class="font-extrabold leading-tight balance"
-              style="font-size:clamp(30px,5.5vw,52px)">
+          <h1 class="font-extrabold leading-tight balance" style="font-size:clamp(30px,5.5vw,52px)">
             AI·에듀테크로 교실의 미래를 설계합니다
           </h1>
           <p class="mt-4 text-lg md:text-xl text-slate-700/90">
@@ -108,19 +105,17 @@
     <section id="about" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">소개</h2>
-        <!-- 요구 4: 소개글 4~5줄 풍부화 -->
+        <!-- 교육철학 3~4줄 -->
         <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm ring-1 ring-slate-100">
           <p class="text-lg mb-3">
-            안녕하세요. 완도초등학교와 완도SW교육체험센터에서 학생들을 가르치며, 교실에 꼭 맞는 AI·에듀테크 실천 모델을 설계·보급하고 있는 박준효입니다.
+            빠르게 변화하는 시대 속에서 <strong>올바른 AI교육</strong>이 무엇인지 끊임없이 질문합니다.
           </p>
           <p class="mb-3">
-            생성형 AI, Notion×Make, Apps Script, Streamlit 등 도구를 연계해 <strong>수업 준비–평가–학급운영–행정</strong>을 하나의 워크플로로 연결하고, 교사 업무를 실질적으로 경감하는 방법을 연구합니다.
+            기술은 목적이 아닌 <strong>배움의 도구</strong>라는 믿음으로, 교실 맥락에 맞는 작은 자동화와 실습을 설계합니다.
           </p>
           <p class="mb-3">
-            전남메타스쿨·에듀테크 현장지원단 활동과 다양한 학교 방문 연수를 통해 현장의 요구를 빠르게 반영하며, 누구나 따라 만들 수 있는 템플릿과 사례 중심의 연수를 진행합니다.
-          </p>
-          <p class="mb-0">
-            최근에는 AI 디지털교과서, AIEDAP, 생성형 AI 기반 수업·평가 고도화에 집중하고 있으며, 교사와 학생이 함께 성장하는 교실을 지향합니다.
+            “<strong>선생님이 먼저 쓰면 아이들도 쓴다</strong>”는 원칙 아래, 교사가 <strong>더 편하고 쉽게</strong> 활용할 수 있는 워크플로를 만들고
+            학생들이 스스로 문제를 해결하는 경험을 넓혀갑니다.
           </p>
         </div>
       </div>
@@ -131,29 +126,39 @@
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">주요 경력</h2>
 
-        <!-- 요구 3: 강사카드 기반 상세 경력 요약 반영 -->
         <div class="grid md:grid-cols-2 gap-6">
+          <!-- 소속/수상 -->
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
             <h3 class="text-lg font-bold text-slate-800 mb-2">소속 · 수상</h3>
             <ul class="list-disc list-inside text-slate-700 space-y-1.5">
               <li>완도초등학교 교사 / SW교육체험센터 전담교사</li>
               <li>교육부 <strong>교실혁명 선도교사</strong></li>
-              <li>전남메타스쿨 <strong>현장지원단·온라인 컨설턴트</strong>(2023~2025)</li>
+              <li>전남메타스쿨 <strong>현장지원단·온라인 컨설턴트</strong></li>
               <li>전라남도교육청 <strong>에듀테크 현장지원단</strong></li>
-              <li><strong>과학기술정보통신부 장관상</strong> 우수교원 표창(2024)</li>
+              <li><strong>과학기술정보통신부 장관상</strong> 우수교원 표창</li>
               <li>AIEDAP <strong>마스터교원</strong>, 네이버 <strong>ZEP Quiz 선도교사(1기)</strong></li>
             </ul>
           </div>
 
+          <!-- 연수/컨설팅 (연도 표기 제거) -->
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
             <h3 class="text-lg font-bold text-slate-800 mb-2">연수 · 컨설팅</h3>
             <ul class="list-disc list-inside text-slate-700 space-y-1.5">
-              <li>전남메타스쿨 <strong>학교로 찾아가는 연수</strong>(2023–2024)</li>
-              <li>완도교육지원청 교원(유·초·중) 역량강화 연수 다수(2024–2025)</li>
+              <li>전남메타스쿨 <strong>학교로 찾아가는 연수</strong></li>
+              <li>완도교육지원청 유·초·중 교원 역량강화 연수 다수</li>
               <li>AI 디지털교과서 <strong>활용 연수 강사</strong>(지원청/도교육청)</li>
-              <li>전국 사서교사 신규연수(협력수업, 2023)</li>
-              <li>섬으로 찾아가는 SW 프로그램, 생성형 AI 탐구수업(고등) 등 다수</li>
-              <li>2025 <strong>학교로 찾아가는 컨설팅</strong> 출강</li>
+              <li>전국 사서교사 신규연수(협력수업)</li>
+              <li>섬으로 찾아가는 SW 프로그램, 생성형 AI 탐구수업(고)</li>
+              <li><strong>학교로 찾아가는 컨설팅</strong> 출강</li>
+            </ul>
+          </div>
+
+          <!-- 학생 지도·성과 -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 md:col-span-2">
+            <h3 class="text-lg font-bold text-slate-800 mb-2">학생 지도 · 성과</h3>
+            <ul class="list-disc list-inside text-slate-700 space-y-1.5">
+              <li><strong>에듀테크 코리안 페어 메타버스 제작대회</strong> 최우수상·우수상 <strong>지도교사</strong></li>
+              <li><strong>전남학생해커톤대회(초등부)</strong> 금상 <strong>지도교사</strong></li>
             </ul>
           </div>
         </div>
@@ -164,7 +169,7 @@
       </div>
     </section>
 
-    <!-- Lectures (간단 표기) -->
+    <!-- Lectures -->
     <section id="lectures" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-6xl">
         <h2 class="section-title">대표 연수</h2>
@@ -209,7 +214,7 @@
           </div>
         </div>
 
-        <!-- 기타 링크: 키워드/하이퍼링크 -->
+        <!-- 기타 링크 -->
         <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
           <h3 class="text-lg font-bold mb-4">자료집 · 프롬프트</h3>
           <ul class="list-disc list-inside text-sky-700 space-y-2">
@@ -223,19 +228,16 @@
       </div>
     </section>
 
-    <!-- Resources (선택: 루트에 파일 업로드 시 자동 링크) -->
+    <!-- Resources -->
     <section id="resources" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">자료 (PDF/PPT)</h2>
         <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm ring-1 ring-slate-100">
           <ul class="space-y-3">
             <li><a class="text-sky-700 hover:underline font-medium" href="Chat%20GPT%20연수_250911.pdf" target="_blank" rel="noopener">Chat GPT 연수_250911.pdf</a></li>
-            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C(%EB%B0%95%EC%A4%80%ED%9A%A8).pdf" target="_blank" rel="noopener">강사카드(박준효).pdf</a></li>
-            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C_%EC%B0%BD%EC%9D%98%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EC%9B%90%EC%84%9C%EC%8B%9D_%EB%B0%95%EC%A4%80%ED%9A%A8(%EC%A0%95%EB%B3%B4%EB%8F%99%EC%9D%98%ED%8F%AC%ED%95%A8).pdf" target="_blank" rel="noopener">강사카드_창의융합교육원서식_박준효(정보동의포함).pdf</a></li>
             <li><a class="text-sky-700 hover:underline font-medium" href="%EB%85%B8%EC%85%98%20%EA%B0%95%EC%9D%98%20PPT.pptx" target="_blank" rel="noopener">노션 강의 PPT.pptx</a></li>
             <li><a class="text-sky-700 hover:underline font-medium" href="%EC%A0%84%EB%82%A8%EB%A9%94%ED%83%80%EC%8A%A4%EC%BF%A8%20%EA%B0%95%EC%9D%98_miricanvas_250918.pptx" target="_blank" rel="noopener">전남메타스쿨 강의_miricanvas_250918.pptx</a></li>
           </ul>
-          <p class="mt-6 text-sm text-slate-500">※ 파일명을 그대로 루트에 업로드해 주세요. 공백/한글은 URL 인코딩으로 연결됩니다.</p>
         </div>
       </div>
     </section>
@@ -253,7 +255,7 @@
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-400 py-6">
     <div class="container mx-auto px-5 md:px-8 text-center">
-      <p>&copy; 2025 박준효. All Rights Reserved.</p>
+      <p>&copy; 2025 junhyo park. All Rights Reserved.</p>
     </div>
   </footer>
 
