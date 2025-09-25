@@ -8,7 +8,7 @@
   <!-- SEO -->
   <meta name="description" content="AI와 에듀테크로 교실의 미래를 설계하는 박준효 교사의 포트폴리오. Streamlit, 생성형 AI, Notion, Apps Script 기반 수업·업무 혁신 연수.">
   <meta property="og:title" content="박준효 교사 | 포트폴리오">
-  <meta property="og:description" content="AI와 에듀테크로 교실의 미래를 설계합니다.">
+  <meta property="og:description" content="AI·에듀테크로 교실의 미래를 설계합니다.">
   <meta property="og:image" content="avatar.jpg">
   <meta name="theme-color" content="#e9d5ff">
 
@@ -33,8 +33,10 @@
                   radial-gradient(800px 500px at 50% 100%, #ccfbf1 0%, transparent 60%),
                   linear-gradient(135deg, #93c5fd 0%, #c7d2fe 40%, #fbcfe8 75%, #99f6e4 100%);
     }
-    .section-title { @apply text-3xl font-bold text-slate-800 mb-10 text-center; }
-    .chip { @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/70 text-slate-700 ring-1 ring-slate-200; }
+    .section-title { font-weight:700; font-size:1.875rem; line-height:2.25rem; color:#0f172a; text-align:center; margin-bottom:2.5rem; }
+    .chip { display:inline-flex; align-items:center; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; background:rgba(255,255,255,.7); color:#334155; box-shadow:0 0 0 1px #e2e8f0 inset; }
+    .text-gradient { background: linear-gradient(90deg, #38bdf8, #a78bfa, #34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .balance { text-wrap:balance; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
@@ -42,11 +44,12 @@
   <!-- Header -->
   <header class="bg-white/90 backdrop-blur sticky top-0 z-50 border-b border-slate-100">
     <nav class="container mx-auto px-5 md:px-8 py-4 flex justify-between items-center">
-      <a href="#" class="flex items-center gap-3 font-bold text-xl">
-        <img src="logo.png" alt="로고" class="h-9 w-9 object-contain" onerror="this.style.display='none'">
-        <span class="text-slate-800">박준효 교사</span>
+      <a href="#" class="flex items-center gap-3">
+        <img src="logo.png" alt="로고" class="h-8 w-8 object-contain" onerror="this.style.display='none'">
+        <!-- 요구 1: 좌측 상단 라벨 교체(작은 글씨+그라데이션) -->
+        <span class="text-gradient font-semibold text-sm md:text-base">완도SW교육체험센터</span>
       </a>
-      <div class="hidden md:flex gap-6">
+      <div class="hidden md:flex gap-6 font-medium">
         <a href="#about" class="hover:text-sky-600">소개</a>
         <a href="#experience" class="hover:text-sky-600">주요 경력</a>
         <a href="#lectures" class="hover:text-sky-600">대표 연수</a>
@@ -78,13 +81,15 @@
             <span class="chip">수업 혁신</span>
             <span class="chip">업무 자동화</span>
           </div>
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
-            AI와 에듀테크로 교실의 미래를 설계합니다.
+          <!-- 요구 2: 어색한 줄바꿈 해결 (문구 약간 축약 + clamp로 가변 글자크기) -->
+          <h1 class="font-extrabold leading-tight balance"
+              style="font-size:clamp(30px,5.5vw,52px)">
+            AI·에듀테크로 교실의 미래를 설계합니다
           </h1>
-          <p class="text-lg md:text-xl text-slate-700/90 mb-8">
+          <p class="mt-4 text-lg md:text-xl text-slate-700/90">
             Streamlit, 생성형 AI, Notion, Apps Script를 활용해 수업과 업무를 혁신합니다.
           </p>
-          <a href="#contact" class="inline-flex items-center justify-center rounded-xl px-5 py-3 font-bold bg-white text-sky-700 ring-1 ring-sky-200 hover:bg-sky-50">
+          <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-xl px-5 py-3 font-bold bg-white text-sky-700 ring-1 ring-sky-200 hover:bg-sky-50">
             연수 문의하기
           </a>
         </div>
@@ -103,9 +108,19 @@
     <section id="about" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">소개</h2>
+        <!-- 요구 4: 소개글 4~5줄 풍부화 -->
         <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm ring-1 ring-slate-100">
-          <p class="text-lg mb-4">
-            안녕하세요! AI와 에듀테크를 활용하여 교육 현장의 혁신을 이끌고 있는 초등학교 교사 박준효입니다.
+          <p class="text-lg mb-3">
+            안녕하세요. 완도초등학교와 완도SW교육체험센터에서 학생들을 가르치며, 교실에 꼭 맞는 AI·에듀테크 실천 모델을 설계·보급하고 있는 박준효입니다.
+          </p>
+          <p class="mb-3">
+            생성형 AI, Notion×Make, Apps Script, Streamlit 등 도구를 연계해 <strong>수업 준비–평가–학급운영–행정</strong>을 하나의 워크플로로 연결하고, 교사 업무를 실질적으로 경감하는 방법을 연구합니다.
+          </p>
+          <p class="mb-3">
+            전남메타스쿨·에듀테크 현장지원단 활동과 다양한 학교 방문 연수를 통해 현장의 요구를 빠르게 반영하며, 누구나 따라 만들 수 있는 템플릿과 사례 중심의 연수를 진행합니다.
+          </p>
+          <p class="mb-0">
+            최근에는 AI 디지털교과서, AIEDAP, 생성형 AI 기반 수업·평가 고도화에 집중하고 있으며, 교사와 학생이 함께 성장하는 교실을 지향합니다.
           </p>
         </div>
       </div>
@@ -115,18 +130,45 @@
     <section id="experience" class="py-16 md:py-20 bg-slate-100">
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">주요 경력</h2>
-        <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
-          <p>완도초등학교 교사 / SW교육체험센터 전담교사</p>
-          <p>교실혁명 선도교사, 전남메타스쿨, 에듀테크 현장지원단 등 다양한 활동</p>
+
+        <!-- 요구 3: 강사카드 기반 상세 경력 요약 반영 -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
+            <h3 class="text-lg font-bold text-slate-800 mb-2">포지션 · 수상</h3>
+            <ul class="list-disc list-inside text-slate-700 space-y-1.5">
+              <li>완도초등학교 교사 / SW교육체험센터 전담교사(완도·진도 권역)</li>
+              <li>교육부 <strong>교실혁명 선도교사</strong></li>
+              <li>전남메타스쿨 <strong>현장지원단·온라인 컨설턴트</strong>(2023~2024)</li>
+              <li>전라남도교육청 <strong>에듀테크 현장지원단</strong></li>
+              <li><strong>과학기술정보통신부 장관상</strong> 우수교원 표창(2024)</li>
+              <li>AIEDAP <strong>마스터교원</strong>, 네이버 <strong>ZEP Quiz 선도교사(1기)</strong></li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
+            <h3 class="text-lg font-bold text-slate-800 mb-2">연수 · 컨설팅</h3>
+            <ul class="list-disc list-inside text-slate-700 space-y-1.5">
+              <li>전남메타스쿨 <strong>학교로 찾아가는 연수</strong>(2023–2024)</li>
+              <li>완도교육지원청 교원(유·초·중) 역량강화 연수 다수(2024–2025)</li>
+              <li>AI 디지털교과서 <strong>활용 연수 강사</strong>(지원청/도교육청)</li>
+              <li>전국 사서교사 신규연수(협력수업, 2023)</li>
+              <li>섬으로 찾아가는 SW 프로그램, 생성형 AI 탐구수업(고등) 등 다수</li>
+              <li>2025 <strong>학교로 찾아가는 컨설팅</strong> 출강</li>
+            </ul>
+          </div>
         </div>
+
+        <p class="text-sm text-slate-500 mt-4">
+          ※ 상세 이력은 요청 시 강의·컨설팅 제안서로 제공해 드립니다.
+        </p>
       </div>
     </section>
 
-    <!-- Lectures -->
+    <!-- Lectures (간단 표기) -->
     <section id="lectures" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-6xl">
         <h2 class="section-title">대표 연수</h2>
-        <p class="text-center text-slate-600">Streamlit, 생성형 AI, Notion, Apps Script 관련 대표 강의</p>
+        <p class="text-center text-slate-600">Streamlit, 생성형 AI, Notion×Make, Apps Script 기반 연수 운영</p>
       </div>
     </section>
 
@@ -135,36 +177,65 @@
       <div class="container mx-auto px-5 md:px-8 max-w-6xl">
         <h2 class="section-title">링크 모음</h2>
 
-        <!-- 메인 앱 (QR 포함) -->
+        <!-- QR 있는 4개 앱: 메인 카드 -->
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 card-hover flex items-center gap-6">
-            <img src="qr1.png" alt="AI 캐치마인드 QR" class="w-24 h-24 object-contain">
-            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://aicatchmind-abnunyubysuxxun7eeqn8r.streamlit.app/" target="_blank">AI 캐치마인드 (Streamlit)</a>
+            <img src="qr1.png" alt="AI 캐치마인드 QR" class="w-24 h-24 object-contain"
+                 onerror="this.src='https://placehold.co/160x160/EFF6FF/0F172A?text=QR1'">
+            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://aicatchmind-abnunyubysuxxun7eeqn8r.streamlit.app/" target="_blank" rel="noopener">
+              AI 캐치마인드 (Streamlit)
+            </a>
           </div>
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 card-hover flex items-center gap-6">
-            <img src="qr2.png" alt="속담 맞추기 QR" class="w-24 h-24 object-contain">
-            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://proverb-game-app-bgedwy9xershq4whkpegx6.streamlit.app/" target="_blank">속담 맞추기 게임 (Streamlit)</a>
+            <img src="qr2.png" alt="속담 맞추기 QR" class="w-24 h-24 object-contain"
+                 onerror="this.src='https://placehold.co/160x160/FDF2F8/0F172A?text=QR2'">
+            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://proverb-game-app-bgedwy9xershq4whkpegx6.streamlit.app/" target="_blank" rel="noopener">
+              속담 맞추기 게임 (Streamlit)
+            </a>
           </div>
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 card-hover flex items-center gap-6">
-            <img src="qr3.png" alt="쇼핑 미션 QR" class="w-24 h-24 object-contain">
-            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://shopping-mission-app.streamlit.app/" target="_blank">쇼핑 미션 앱 (Streamlit)</a>
+            <img src="qr3.png" alt="쇼핑 미션 QR" class="w-24 h-24 object-contain"
+                 onerror="this.src='https://placehold.co/160x160/ECFEFF/0F172A?text=QR3'">
+            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://shopping-mission-app.streamlit.app/" target="_blank" rel="noopener">
+              쇼핑 미션 앱 (Streamlit)
+            </a>
           </div>
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 card-hover flex items-center gap-6">
-            <img src="qr4.png" alt="AI TTS QR" class="w-24 h-24 object-contain">
-            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://steamlit-tts-demo-vhmydzpstuaenqkkzx2emk.streamlit.app/" target="_blank">AI TTS 데모 (Streamlit)</a>
+            <img src="qr4.png" alt="AI TTS QR" class="w-24 h-24 object-contain"
+                 onerror="this.src='https://placehold.co/160x160/F5F3FF/0F172A?text=QR4'">
+            <a class="text-xl font-bold text-sky-700 hover:underline" href="https://steamlit-tts-demo-vhmydzpstuaenqkkzx2emk.streamlit.app/" target="_blank" rel="noopener">
+              AI TTS 데모 (Streamlit)
+            </a>
           </div>
         </div>
 
-        <!-- 기타 링크 -->
+        <!-- 기타 링크: 키워드/하이퍼링크 -->
         <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100">
-          <h3 class="text-lg font-bold mb-4">자료집 / 프롬프트</h3>
+          <h3 class="text-lg font-bold mb-4">자료집 · 프롬프트</h3>
           <ul class="list-disc list-inside text-sky-700 space-y-2">
-            <li><a href="https://quizn.show/pbd/info/board/0255519" target="_blank" class="hover:underline">ChatGPT 프롬프트 모음</a></li>
-            <li><a href="https://quizn.show/pbd/info/board/0349195" target="_blank" class="hover:underline">Notion 연수 자료집</a></li>
-            <li><a href="https://quizn.show/pbd/info/board/0652845" target="_blank" class="hover:underline">Google AI 연수 자료집</a></li>
-            <li><a href="https://quizn.show/pbd/info/board/0638575" target="_blank" class="hover:underline">Miricanvas 강의 자료집</a></li>
-            <li><a href="http://bit.ly/425P9uk" target="_blank" class="hover:underline">학사일정 기반 챗봇 (Apps Script)</a></li>
+            <li><a href="https://quizn.show/pbd/info/board/0255519" target="_blank" rel="noopener" class="hover:underline">ChatGPT 프롬프트 모음</a></li>
+            <li><a href="https://quizn.show/pbd/info/board/0349195" target="_blank" rel="noopener" class="hover:underline">Notion 연수 자료집</a></li>
+            <li><a href="https://quizn.show/pbd/info/board/0652845" target="_blank" rel="noopener" class="hover:underline">Google AI 연수 자료집</a></li>
+            <li><a href="https://quizn.show/pbd/info/board/0638575" target="_blank" rel="noopener" class="hover:underline">Miricanvas 강의 자료집</a></li>
+            <li><a href="http://bit.ly/425P9uk" target="_blank" rel="noopener" class="hover:underline">학사일정 기반 챗봇 (Apps Script)</a></li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources (선택: 루트에 파일 업로드 시 자동 링크) -->
+    <section id="resources" class="py-16 md:py-20">
+      <div class="container mx-auto px-5 md:px-8 max-w-5xl">
+        <h2 class="section-title">자료 (PDF/PPT)</h2>
+        <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm ring-1 ring-slate-100">
+          <ul class="space-y-3">
+            <li><a class="text-sky-700 hover:underline font-medium" href="Chat%20GPT%20연수_250911.pdf" target="_blank" rel="noopener">Chat GPT 연수_250911.pdf</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C(%EB%B0%95%EC%A4%80%ED%9A%A8).pdf" target="_blank" rel="noopener">강사카드(박준효).pdf</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C_%EC%B0%BD%EC%9D%98%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EC%9B%90%EC%84%9C%EC%8B%9D_%EB%B0%95%EC%A4%80%ED%9A%A8(%EC%A0%95%EB%B3%B4%EB%8F%99%EC%9D%98%ED%8F%AC%ED%95%A8).pdf" target="_blank" rel="noopener">강사카드_창의융합교육원서식_박준효(정보동의포함).pdf</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EB%85%B8%EC%85%98%20%EA%B0%95%EC%9D%98%20PPT.pptx" target="_blank" rel="noopener">노션 강의 PPT.pptx</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EC%A0%84%EB%82%A8%EB%A9%94%ED%83%80%EC%8A%A4%EC%BF%A8%20%EA%B0%95%EC%9D%98_miricanvas_250918.pptx" target="_blank" rel="noopener">전남메타스쿨 강의_miricanvas_250918.pptx</a></li>
+          </ul>
+          <p class="mt-6 text-sm text-slate-500">※ 파일명을 그대로 루트에 업로드해 주세요. 공백/한글은 URL 인코딩으로 연결됩니다.</p>
         </div>
       </div>
     </section>
