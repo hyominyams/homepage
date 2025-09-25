@@ -37,6 +37,9 @@
     .chip { display:inline-flex; align-items:center; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; background:rgba(255,255,255,.7); color:#334155; box-shadow:0 0 0 1px #e2e8f0 inset; }
     .text-gradient { background: linear-gradient(90deg, #38bdf8, #a78bfa, #34d399); -webkit-background-clip:text; background-clip:text; color:transparent; }
     .balance { text-wrap:balance; }
+    /* 소개 가독성: 글꼴 크기/줄간격 통일, 카드 폭에 맞는 폭 제한 */
+    .about-text p { font-size: .975rem; line-height: 1.85; margin-bottom: .6rem; color:#334155; }
+    @media (min-width:768px){ .about-text p{ font-size:1.05rem; } }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-700">
@@ -80,10 +83,10 @@
             <span class="chip">수업 혁신</span>
             <span class="chip">업무 자동화</span>
           </div>
-          <h1 class="font-extrabold leading-tight balance" style="font-size:clamp(30px,5.5vw,52px)">
+          <h1 class="font-extrabold leading-tight balance" style="font-size:clamp(30px,5.2vw,50px)">
             AI·에듀테크로 교실의 미래를 설계합니다
           </h1>
-          <p class="mt-4 text-lg md:text-xl text-slate-700/90">
+          <p class="mt-4 text-base md:text-lg text-slate-700/90">
             Streamlit, 생성형 AI, Notion, Apps Script를 활용해 수업과 업무를 혁신합니다.
           </p>
           <a href="#contact" class="mt-8 inline-flex items-center justify-center rounded-xl px-5 py-3 font-bold bg-white text-sky-700 ring-1 ring-sky-200 hover:bg-sky-50">
@@ -105,18 +108,11 @@
     <section id="about" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-5xl">
         <h2 class="section-title">소개</h2>
-        <!-- 교육철학 3~4줄 -->
-        <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm ring-1 ring-slate-100">
-          <p class="text-lg mb-3">
-            빠르게 변화하는 시대 속에서 <strong>올바른 AI교육</strong>이 무엇인지 끊임없이 질문합니다.
-          </p>
-          <p class="mb-3">
-            기술은 목적이 아닌 <strong>배움의 도구</strong>라는 믿음으로, 교실 맥락에 맞는 작은 자동화와 실습을 설계합니다.
-          </p>
-          <p class="mb-3">
-            “<strong>선생님이 먼저 쓰면 아이들도 쓴다</strong>”는 원칙 아래, 교사가 <strong>더 편하고 쉽게</strong> 활용할 수 있는 워크플로를 만들고
-            학생들이 스스로 문제를 해결하는 경험을 넓혀갑니다.
-          </p>
+        <!-- 가독성 강화: 글자작게/줄간격 일정/카드 폭에 딱 맞게 -->
+        <div class="bg-white p-7 md:p-9 rounded-2xl shadow-sm ring-1 ring-slate-100 about-text">
+          <p>빠르게 변화하는 시대 속에서 <strong>올바른 AI교육</strong>이 무엇인지 끊임없이 질문합니다.</p>
+          <p>기술은 목적이 아닌 <strong>배움의 도구</strong>라는 믿음으로, 교실 맥락에 맞는 작은 자동화와 실습을 설계합니다.</p>
+          <p>“<strong>선생님이 먼저 쓰면 아이들도 쓴다</strong>”는 원칙 아래, 교사가 <strong>더 편하고 쉽게</strong> 활용할 수 있는 워크플로를 만들고 학생들의 자기주도적 문제 해결 경험을 넓혀갑니다.</p>
         </div>
       </div>
     </section>
@@ -153,12 +149,12 @@
             </ul>
           </div>
 
-          <!-- 학생 지도·성과 -->
+          <!-- 학생 지도·성과 (연도 추가) -->
           <div class="bg-white p-6 rounded-2xl shadow-sm ring-1 ring-slate-100 md:col-span-2">
             <h3 class="text-lg font-bold text-slate-800 mb-2">학생 지도 · 성과</h3>
             <ul class="list-disc list-inside text-slate-700 space-y-1.5">
-              <li><strong>에듀테크 코리안 페어 메타버스 제작대회</strong> 최우수상·우수상 <strong>지도교사</strong></li>
-              <li><strong>전남학생해커톤대회(초등부)</strong> 금상 <strong>지도교사</strong></li>
+              <li><strong>에듀테크 코리안 페어 메타버스 제작대회</strong> <span class="text-slate-500">2024</span> 최우수상·우수상 <strong>지도교사</strong></li>
+              <li><strong>전남학생해커톤대회(초등부)</strong> <span class="text-slate-500">2025</span> 금상 <strong>지도교사</strong></li>
             </ul>
           </div>
         </div>
@@ -169,11 +165,56 @@
       </div>
     </section>
 
-    <!-- Lectures -->
+    <!-- Lectures: 4구역 카드형 (이미지 없이도 깔끔) -->
     <section id="lectures" class="py-16 md:py-20">
       <div class="container mx-auto px-5 md:px-8 max-w-6xl">
         <h2 class="section-title">대표 연수</h2>
-        <p class="text-center text-slate-600">Streamlit, 생성형 AI, Notion×Make, Apps Script 기반 연수 운영</p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- 생성형AI -->
+          <div class="bg-white rounded-2xl ring-1 ring-slate-100 shadow-sm p-6 card-hover">
+            <div class="text-sm font-semibold text-sky-700 mb-2">Generative AI</div>
+            <h3 class="font-bold text-slate-800 mb-3">생성형 AI (ChatGPT · Gemini)</h3>
+            <ul class="text-slate-600 text-sm space-y-2">
+              <li>• 수업·평가 설계 템플릿</li>
+              <li>• 프롬프트 엔지니어링 기초–응용</li>
+              <li>• 학급 업무 자동화 활용</li>
+            </ul>
+          </div>
+
+          <!-- Streamlit -->
+          <div class="bg-white rounded-2xl ring-1 ring-slate-100 shadow-sm p-6 card-hover">
+            <div class="text-sm font-semibold text-teal-700 mb-2">Python · Web App</div>
+            <h3 class="font-bold text-slate-800 mb-3">Streamlit</h3>
+            <ul class="text-slate-600 text-sm space-y-2">
+              <li>• 인터랙티브 수업자료 제작</li>
+              <li>• 데이터 시각화/간단 배포</li>
+              <li>• 과제/평가 도구 만들기</li>
+            </ul>
+          </div>
+
+          <!-- Apps Script -->
+          <div class="bg-white rounded-2xl ring-1 ring-slate-100 shadow-sm p-6 card-hover">
+            <div class="text-sm font-semibold text-violet-700 mb-2">Google Workspace</div>
+            <h3 class="font-bold text-slate-800 mb-3">Apps Script</h3>
+            <ul class="text-slate-600 text-sm space-y-2">
+              <li>• 스프레드시트 × 웹앱 구축</li>
+              <li>• 양식–시트–알림 연동</li>
+              <li>• 학사일정 챗봇 만들기</li>
+            </ul>
+          </div>
+
+          <!-- Edutech -->
+          <div class="bg-white rounded-2xl ring-1 ring-slate-100 shadow-sm p-6 card-hover">
+            <div class="text-sm font-semibold text-pink-700 mb-2">EdTech Workflow</div>
+            <h3 class="font-bold text-slate-800 mb-3">Edutech</h3>
+            <ul class="text-slate-600 text-sm space-y-2">
+              <li>• Notion × Make 자동화</li>
+              <li>• 수업–행정 통합 워크플로</li>
+              <li>• 사례 중심 실습/컨설팅</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -235,9 +276,12 @@
         <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm ring-1 ring-slate-100">
           <ul class="space-y-3">
             <li><a class="text-sky-700 hover:underline font-medium" href="Chat%20GPT%20연수_250911.pdf" target="_blank" rel="noopener">Chat GPT 연수_250911.pdf</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C(%EB%B0%95%EC%A4%80%ED%9A%A8).pdf" target="_blank" rel="noopener">강사카드(박준효).pdf</a></li>
+            <li><a class="text-sky-700 hover:underline font-medium" href="%EA%B0%95%EC%82%AC%EC%B9%B4%EB%93%9C_%EC%B0%BD%EC%9D%98%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EC%9B%90%EC%84%9C%EC%8B%9D_%EB%B0%95%EC%A4%80%ED%9A%A8(%EC%A0%95%EB%B3%B4%EB%8F%99%EC%9D%98%ED%8F%AC%ED%95%A8).pdf" target="_blank" rel="noopener">강사카드_창의융합교육원서식_박준효(정보동의포함).pdf</a></li>
             <li><a class="text-sky-700 hover:underline font-medium" href="%EB%85%B8%EC%85%98%20%EA%B0%95%EC%9D%98%20PPT.pptx" target="_blank" rel="noopener">노션 강의 PPT.pptx</a></li>
             <li><a class="text-sky-700 hover:underline font-medium" href="%EC%A0%84%EB%82%A8%EB%A9%94%ED%83%80%EC%8A%A4%EC%BF%A8%20%EA%B0%95%EC%9D%98_miricanvas_250918.pptx" target="_blank" rel="noopener">전남메타스쿨 강의_miricanvas_250918.pptx</a></li>
           </ul>
+          <p class="mt-6 text-sm text-slate-500">※ 파일명을 그대로 루트에 업로드해 주세요. 공백/한글은 URL 인코딩으로 연결됩니다.</p>
         </div>
       </div>
     </section>
@@ -255,7 +299,7 @@
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-400 py-6">
     <div class="container mx-auto px-5 md:px-8 text-center">
-      <p>&copy; 2025 junhyo park. All Rights Reserved.</p>
+      <p>&copy; 2025 박준효. All Rights Reserved.</p>
     </div>
   </footer>
 
